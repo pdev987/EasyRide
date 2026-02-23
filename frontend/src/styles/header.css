@@ -1,0 +1,33 @@
+header {
+    height: 80px;
+    background-color: #E2E8F0;
+    display: flex;
+    align-items: center;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+.header-logo-project-name-container {
+    display: flex;
+    margin-right: auto;
+
+    a {
+        color: #221A7F;
+    }
+}
+
+.project-name {
+    font-weight: 700;
+    font-size: 2rem;
+    padding: 10px;
+}
+
+nav {
+    display: flex;
+
+    a {
+        padding: 5px 25px;
+    }
+}
