@@ -52,7 +52,7 @@ export default function Cars() {
 
   return (
     <div className="cars-main-container">
-      <h1>Explore our fleet of {cars.length} total cars.</h1>
+      <h1>Explore our fleet of {cars.length} cars.</h1>
       <div className="cars-type-filter-buttons">
         <button
           onClick={() => handleCarTypeFilter("carType", "sedan")}

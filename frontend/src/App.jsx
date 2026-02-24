@@ -2,8 +2,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import Layout from "./components/Layout"
-import Landing from "./pages/Landing/Landing"
+import Landing from "./pages/landing/Landing"
 import Cars from "./pages/cars/Cars"
+import Bookings from "./pages/bookings/Bookings"
 import './styles/App.css'
 
 
@@ -16,7 +17,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Landing />} />
           <Route path="cars" element={<Cars />} />
-          <Route path="booking/:id" element={<h1>Bookings page</h1>} />
+          <Route path="bookings/:id?" element={<Bookings />} />
         </Route>
       </Routes>
     </BrowserRouter>
