@@ -138,7 +138,7 @@ export default function Bookings() {
           </div>
           }
         </div>
-      </> : <h1>Select the Car to Book</h1>
+      </> : <h1>Select the Car to Book. Please visit the "Cars" page.</h1>
       }
     </div >
 

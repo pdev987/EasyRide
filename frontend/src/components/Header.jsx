@@ -22,16 +22,22 @@ export default function Header() {
       </div>
       <nav>
         <NavLink
+          to="aibot"
+          style={({ isActive }) => isActive ? activeStyle : null}
+        >
+          Ai Assistant
+        </NavLink>
+        <NavLink
           to="cars"
           style={({ isActive }) => isActive ? activeStyle : null}
         >
           Cars
         </NavLink>
         <NavLink
-          to="aibot"
+          to="bookings"
           style={({ isActive }) => isActive ? activeStyle : null}
         >
-          Ai Assistant
+          Bookings
         </NavLink>
         <NavLink
           to="about"

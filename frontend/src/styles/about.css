@@ -2,7 +2,6 @@
     display: flex;
     column-gap: 25px;
     padding: 25px;
-    margin: 25px;
     background-color: var(--cards-bg);
     border-radius: 12px;
     justify-content: center;
