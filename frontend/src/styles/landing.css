@@ -4,30 +4,36 @@
     margin-bottom: 25px;
 }
 
+.cover-main-container a:hover {
+    transform: translate(1px, 1px);
+    transition: transform 0.1s ease-in-out;
+}
+
 .cover-ai-card {
     display: flex;
     margin: 15px auto;
     padding: 15px;
-    align-items: c
+    align-items: center;
 
     p {
         color: var(--p-color);
     }
 }
 
+
 .cover-info-container {
     display: flex;
     margin-block: 25px;
     padding-block: 25px;
+    padding-inline: 15px;
     align-items: center;
     justify-content: center;
     background-color: var(--cards-bg);
-    border-radius: 12px;
+    border-radius: var(--main-border-radius);
 }
 
 .cover-text {
     margin-inline: 27px 50px;
-    padding: 50px;
 }
 
 .cover-text h1 {
@@ -41,7 +47,7 @@
 .why-choose-text {
     margin-block: 25px;
     padding-block: 25px;
-    border-radius: 12px;
+    border-radius: var(--main-border-radius);
 
     h3 {
         text-align: center;
@@ -59,15 +65,19 @@
 .why-choose-cards {
     padding-inline: 25px;
     display: flex;
-    justify-content: center;
+    column-gap: 15px;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    /*flex-wrap: no-wrap;*/
+    justify-content: space-around;
 }
 
 .why-choose-sub-card {
     height: 240px;
-    width: 250px;
+    width: 350px;
     background-color: var(--cards-bg);
     padding: 15px;
-    border-radius: 12px;
+    border-radius: var(--main-border-radius);
     box-shadow: 0px 25px 50px -12px #00000040;
 
     svg {
@@ -99,32 +109,36 @@
 
 .cover-image {
     width: 350px;
-    border-radius: 12px;
+    border-radius: var(--main-border-radius);
     margin-right: 27px;
     box-shadow: 0px 25px 50px -12px #00000040;
 }
 
 .browse-car-button {
-    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
     height: 62px;
     width: 161px;
     background-color: var(--theme-color);
     color: white;
-    border-radius: 12px;
+    border-radius: var(--main-border-radius);
     margin-top: 15px;
     cursor: pointer;
 }
 
 .our-fleet-container {
     display: flex;
+    width: 100%;
     flex-direction: column;
     background-color: var(--cards-bg);
     margin-top: 50px;
     padding: 25px;
-    border-radius: 12px;
+    border-radius: var(--main-border-radius);
 
     .heading {
-        border-radius: 12px;
+        border-radius: var(--main-border-radius);
 
         h3 {
             text-align: center;
@@ -140,12 +154,34 @@
     }
 }
 
+.feature-fleet-container {
+    margin-bottom: 50px;
+}
 
 .cards-container {
     display: flex;
+    row-gap: 15px;
+    flex-wrap: wrap;
+    /*flex-wrap: no-wrap;*/
     justify-content: space-around;
     column-gap: 15px;
     margin-top: 45px;
+}
+
+.our-fleet-car-link {
+    align-self: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    height: 62px;
+    width: 161px;
+    background-color: var(--theme-color);
+    color: white;
+    border-radius: var(--main-border-radius);
+    margin-top: 15px;
+    cursor: pointer;
 }
 
 .cover-main-address-container {
@@ -160,7 +196,7 @@
     width: 450px;
     margin: 50px auto;
     background-color: white;
-    border-radius: 12px;
+    border-radius: var(--main-border-radius);
 
     h3 {
         color: var(--main-font-color);
@@ -209,7 +245,7 @@ hr {
     min-width: 250px;
     padding: 15px 25px;
     background-color: var(--cards-bg);
-    border-radius: 12px;
+    border-radius: var(--main-border-radius);
     margin-bottom: 15px;
     box-shadow: 0px 25px 50px -12px #00000040;
 }

@@ -1,0 +1,51 @@
+.cars-main-container {
+    padding-inline: 27px;
+}
+
+.cars-type-filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 15px;
+}
+
+.cars-main-container h1 {
+    color: var(--main-font-color);
+}
+
+.car-type {
+    height: 35px;
+    border: none;
+    padding: 5px 25px;
+    border-radius: 5px;
+    font-weight: 700;
+    color: var(--main-font-color);
+    cursor: pointer;
+    transition: 250ms all cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.car-type:hover {
+    transform: translate(1px, 1px);
+    transition: transform 0.1s ease-in-out;
+}
+
+.car-list {
+    padding-block: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 15px;
+    row-gap: 15px;
+}
+
+.car-type.button-selected {
+    background-color: var(--theme-color);
+    color: white;
+}
+
+.car-type.clear-filters {
+    margin-right: -20px;
+    height: 34px;
+    background-color: transparent;
+    font-weight: 450;
+    text-decoration: underline;
+}

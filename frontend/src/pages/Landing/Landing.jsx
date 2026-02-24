@@ -1,9 +1,37 @@
+import React from "react"
 import { FaSearch, FaCalendarAlt, FaKey } from "react-icons/fa"
+import { Link } from "react-router-dom"
 import coverImage from "../../assets/coverImage.webp"
 import "../../styles/landing.css"
 import CarCard from "../../components/CarCard"
+import { tempApiUrl } from "../../App"
 
 export default function Landing() {
+  const [cars, setCars] = React.useState([])
+  const [loading, setLoading] = React.useState(false)
+  const [error, setError] = React.useState(null)
+
+  React.useEffect(() => {
+    const url = `${tempApiUrl}/api/v1/getcars/3`
+    setLoading(true)
+    fetch(url)
+      .then(resp => resp.json())
+      .then(data => {
+        console.log(data)
+        setCars(data)
+        setLoading(false)
+      }).catch((e) => setError(e))
+  }, [])
+
+  const carFleetCards = cars.map(car => <CarCard key={car.id} car={car} />)
+  if (loading) {
+    return <h1>Loading</h1>
+  }
+
+  if (error) {
+    return <h1>Error occured</h1>
+  }
+
   return (
     <div className="cover-main-container">
 
@@ -22,7 +50,7 @@ export default function Landing() {
             with our premium fleet of vehicles
             tailored for your journey.
           </p>
-          <button className="browse-car-button">Browse Cars</button>
+          <Link className="browse-car-button" to="cars">Browse All Cars</Link>
         </div>
         <img className="cover-image" src={coverImage} alt="Cover Image" />
       </div>
@@ -47,7 +75,7 @@ export default function Landing() {
         </div>
 
         <div className="why-choose-sub-card">
-          <FaSearch />
+          <FaCalendarAlt />
           <h4>Reliable Support</h4>
           <p>
             24/7 dedicated support and immediate
@@ -57,7 +85,7 @@ export default function Landing() {
         </div>
 
         <div className="why-choose-sub-card">
-          <FaSearch />
+          <FaKey />
           <h4>Reliable Support</h4>
           <p>
             24/7 dedicated support and immediate
@@ -65,7 +93,6 @@ export default function Landing() {
             mind during your journey.
           </p>
         </div>
-
       </div>
 
       <div className="our-fleet-container">
@@ -76,9 +103,11 @@ export default function Landing() {
           </div>
 
           <div className="cards-container">
-            <CarCard />
+            {cars && carFleetCards}
           </div>
+
         </div>
+        <Link className="our-fleet-car-link" to="cars">View All Cars</Link>
       </div>
 
       <div className="cover-main-address-container">
