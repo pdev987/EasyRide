@@ -75,6 +75,11 @@
         color: white;
         font-weight: 800;
     }
+
+    button:hover {
+        transform: translate(1px, 1px);
+        transition: transform 0.1s ease-in-out;
+    }
 }
 
 .schedule-container form fieldset {
@@ -129,12 +134,23 @@
         border-radius: 5px;
         color: white;
         font-weight: 800;
+        box-shadow: 0px 15px 20px -12px var(--theme-color);
+    }
+
+    button:hover {
+        transform: translate(1px, 1px);
+        transition: transform 0.1s ease-in-out;
     }
 
     .total-pricing {
         h3 {
             font-weight: 400;
             color: var(--p-color);
+
+            span {
+                color: black;
+                font-weight: 700;
+            }
         }
 
         p {
@@ -145,6 +161,7 @@
         }
     }
 }
+
 
 /*.container-block-1 {
     justify-self: center;

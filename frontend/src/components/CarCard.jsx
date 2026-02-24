@@ -40,7 +40,7 @@ export default function CarCard({ car }) {
 
       <div className="car-pricing">
         <h4>{`\u20B9${car.price}`}<span>/day</span></h4>
-        <Link to={`/bookings/${car.id}`}>Rent Now</Link>
+        <Link to={`/cars/${car.id}`}>View Car</Link>
       </div>
 
     </div>

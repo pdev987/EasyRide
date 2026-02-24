@@ -5,6 +5,7 @@ import { tempApiUrl } from "../../App"
 import { FaC, FaPerson, FaRegStar } from "react-icons/fa6"
 import { MdOutlineSettings } from "react-icons/md"
 import { BsFuelPump } from "react-icons/bs"
+import Confetti from "react-confetti"
 import "../../styles/booking.css"
 
 export default function Bookings() {
@@ -20,7 +21,7 @@ export default function Bookings() {
       .then(data => {
         setCar(data)
       })
-  }, [])
+  }, [id])
 
   React.useEffect(() => {
     if (pricingComponentRef.current) {
@@ -69,7 +70,7 @@ export default function Bookings() {
 
         <div className="test-container">
 
-          <div className="car-info-container">
+          <div className="booking-car-info-container">
             <div className="car-card">
               <img className="car-image" src={car.imageUrl} alt={car.name}></img>
               <div className="car-info">
@@ -130,7 +131,7 @@ export default function Bookings() {
             </div>
 
             <div className="total-pricing">
-              <h3>Total Price for {daysInfo.difference} days Incluing tax.</h3>
+              <h3>Total Price for <span>{daysInfo.difference}</span> days Incluing tax.</h3>
               <p>{`\u20B9${car.price * daysInfo.difference}`}</p>
             </div>
 

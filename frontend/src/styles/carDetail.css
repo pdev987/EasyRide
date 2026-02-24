@@ -1,0 +1,99 @@
+.main-container {
+    display: flex;
+    padding-block: 25px;
+    justify-content: center;
+    align-items: center;
+    column-gap: 25px;
+    background-color: var(--cards-bg);
+    border-radius: 12px;
+}
+
+.image-container {
+    margin-right: 50px;
+    box-shadow: 0px 15px 20px -12px #00000040;
+
+    img {
+        object-fit: cover;
+        border: none;
+        border-radius: 12px;
+    }
+}
+
+.car-info-container {
+    background-color: white;
+    border-radius: 12px;
+    width: 40%;
+    padding-inline: 24px;
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    row-gap: 25px;
+    box-shadow: 0px 15px 20px -12px #00000040;
+
+    .container-1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px dashed var(--p-color);
+
+        .text-and-review p {
+            display: flex;
+            align-items: center;
+        }
+
+        .text-and-review h1 {
+            font-weight: 600;
+        }
+
+        .text-and-review p {
+            display: flex;
+            align-items: center;
+        }
+
+        .text-and-review svg {
+            color: gold;
+            margin-right: 5px;
+        }
+
+        .price-container p {
+            color: var(--p-color);
+
+            span {
+                color: var(--theme-color);
+                font-weight: 700;
+                font-size: 27px;
+            }
+        }
+
+    }
+
+    .container-2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border-bottom: 1px dashed var(--p-color);
+    }
+
+    .container-3 {
+
+        h6 {
+            font-size: 16px;
+        }
+    }
+
+    .container-4 {
+        text-align: center;
+        padding: 24px;
+        color: white;
+        font-weight: 700;
+        background-color: var(--theme-color);
+        border-radius: 12px;
+        box-shadow: 0px 15px 20px -12px var(--theme-color);
+    }
+
+    .container-4:hover {
+        transform: translate(1px, 1px);
+        transition: transform 0.2s ease-in-out;
+    }
+}
+}

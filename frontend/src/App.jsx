@@ -5,6 +5,7 @@ import Layout from "./components/Layout"
 import Landing from "./pages/landing/Landing"
 import Cars from "./pages/cars/Cars"
 import Bookings from "./pages/bookings/Bookings"
+import CarDetail from './pages/cars/CarDetail'
 import './styles/App.css'
 
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Landing />} />
           <Route path="cars" element={<Cars />} />
+          <Route path="cars/:id" element={<CarDetail />} />
           <Route path="bookings/:id?" element={<Bookings />} />
         </Route>
       </Routes>
