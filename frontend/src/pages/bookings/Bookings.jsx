@@ -25,7 +25,6 @@ export default function Bookings() {
 
   React.useEffect(() => {
     if (pricingComponentRef.current) {
-      console.log(pricingComponentRef)
       pricingComponentRef.current.scrollIntoView({
         behavior: "smooth",
         block: "end",

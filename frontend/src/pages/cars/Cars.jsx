@@ -20,7 +20,6 @@ export default function Cars() {
       .then(resp => resp.json())
       .then(data => {
         setCars(data)
-        console.log(data)
         setLoadingPage(false)
       }).catch((e) => setError(e))
   }, [])

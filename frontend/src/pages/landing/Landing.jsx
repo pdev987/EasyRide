@@ -17,7 +17,6 @@ export default function Landing() {
     fetch(url)
       .then(resp => resp.json())
       .then(data => {
-        console.log(data)
         setCars(data)
         setLoading(false)
       }).catch((e) => setError(e))

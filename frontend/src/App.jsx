@@ -6,6 +6,7 @@ import Landing from "./pages/landing/Landing"
 import Cars from "./pages/cars/Cars"
 import Bookings from "./pages/bookings/Bookings"
 import CarDetail from './pages/cars/CarDetail'
+import NotExist from "./pages/NotExist"
 import './styles/App.css'
 
 
@@ -20,6 +21,9 @@ function App() {
           <Route path="cars" element={<Cars />} />
           <Route path="cars/:id" element={<CarDetail />} />
           <Route path="bookings/:id?" element={<Bookings />} />
+
+
+          <Route path="*" element={<NotExist />} />
         </Route>
       </Routes>
     </BrowserRouter>
