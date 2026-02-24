@@ -1,0 +1,144 @@
+import { FaSearch, FaCalendarAlt, FaKey } from "react-icons/fa"
+import coverImage from "../../assets/coverImage.webp"
+import "../../styles/landing.css"
+import CarCard from "../../components/CarCard"
+
+export default function Landing() {
+  return (
+    <div className="cover-main-container">
+
+      <div className="cover-ai-card">
+        <h2>Book with our New AI Assistant.</h2>
+        <p>Get personalized car rental recommendations in seconds.
+          Chat with our AI to compare prices,
+          see transparent fees and book instantly.
+        </p>
+      </div>
+
+      <div className="cover-info-container">
+        <div className="cover-text">
+          <h1>Rent Your Next <span>Adventure</span></h1>
+          <p>Experience the freedom of the open road
+            with our premium fleet of vehicles
+            tailored for your journey.
+          </p>
+          <button className="browse-car-button">Browse Cars</button>
+        </div>
+        <img className="cover-image" src={coverImage} alt="Cover Image" />
+      </div>
+
+      <div className="why-choose-text">
+        <h3>Why Choose Our Service</h3>
+        <p> We provide the best car rental Experience
+          with focus on quality, price, and customer satisfaction.
+        </p>
+      </div>
+
+      <div className="why-choose-cards">
+
+        <div className="why-choose-sub-card">
+          <FaSearch />
+          <h4>Reliable Support</h4>
+          <p>
+            24/7 dedicated support and immediate
+            roadside assistance for total peace of
+            mind during your journey.
+          </p>
+        </div>
+
+        <div className="why-choose-sub-card">
+          <FaSearch />
+          <h4>Reliable Support</h4>
+          <p>
+            24/7 dedicated support and immediate
+            roadside assistance for total peace of
+            mind during your journey.
+          </p>
+        </div>
+
+        <div className="why-choose-sub-card">
+          <FaSearch />
+          <h4>Reliable Support</h4>
+          <p>
+            24/7 dedicated support and immediate
+            roadside assistance for total peace of
+            mind during your journey.
+          </p>
+        </div>
+
+      </div>
+
+      <div className="our-fleet-container">
+        <div className="feature-fleet-container">
+          <div className="heading">
+            <h3>Our Featured Fleet</h3>
+            <p>Explore our most popular vehicles Choosen by travellers like you</p>
+          </div>
+
+          <div className="cards-container">
+            <CarCard />
+          </div>
+        </div>
+      </div>
+
+      <div className="cover-main-address-container">
+        <div className="cover-main-address">
+          <h3>Visit Our Main Hub</h3>
+          <p>
+            We're strategically located near
+            major transit hubs to ensure you
+            can start your journey immedietly
+            upon arrival
+          </p>
+          <p>123 Dasrahalli, Banglore</p>
+          <p>+91 9999999999</p>
+          <button>Get Direction</button>
+        </div>
+      </div>
+      {/*
+      <div className="cover-process">
+        <div className="cover-cards">
+          <div className="cover-cards-icon">
+            <FaSearch />
+          </div>
+          <div className="cover-cards-text-info">
+            <h3>Search</h3>
+            <p>
+              Find the perfect ride for your
+              destination. Filter by Vehicle type.
+            </p>
+          </div>
+        </div>
+
+        <div className="cover-cards">
+          <div className="cover-cards-icon">
+            <FaCalendarAlt />
+          </div>
+          <div className="cover-cards-text-info">
+            <h3>Book</h3>
+            <p>
+              Secure your vechile in seconds
+              with instant confirmation and
+              flexible cancellation.
+            </p>
+          </div>
+        </div>
+
+        <div className="cover-cards">
+          <div className="cover-cards-icon">
+            <FaKey />
+          </div>
+          <div className="cover-cards-text-info">
+            <h3>Drive</h3>
+            <p>
+              Pick up your keys from our
+              convenient locations and hit the
+              open road.
+            </p>
+          </div>
+        </div>
+      </div>*/}
+
+    </div >
+  )
+}

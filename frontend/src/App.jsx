@@ -2,7 +2,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import Layout from "./components/Layout"
-import Landing from "./pages/Landing"
+import Landing from "./pages/Landing/Landing"
 import './styles/App.css'
 
 function App() {
