@@ -2,6 +2,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import Layout from "./components/Layout"
+import About from "./pages/About"
 import Landing from "./pages/landing/Landing"
 import Cars from "./pages/cars/Cars"
 import Bookings from "./pages/bookings/Bookings"
@@ -21,6 +22,7 @@ function App() {
           <Route path="cars" element={<Cars />} />
           <Route path="cars/:id" element={<CarDetail />} />
           <Route path="bookings/:id?" element={<Bookings />} />
+          <Route path="about" element={<About />} />
 
 
           <Route path="*" element={<NotExist />} />

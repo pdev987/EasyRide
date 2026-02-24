@@ -108,21 +108,6 @@ export default function Landing() {
         </div>
         <Link className="our-fleet-car-link" to="cars">View All Cars</Link>
       </div>
-
-      <div className="cover-main-address-container">
-        <div className="cover-main-address">
-          <h3>Visit Our Main Hub</h3>
-          <p>
-            We're strategically located near
-            major transit hubs to ensure you
-            can start your journey immedietly
-            upon arrival
-          </p>
-          <p>123 Dasrahalli, Banglore</p>
-          <p>+91 9999999999</p>
-          <button>Get Direction</button>
-        </div>
-      </div>
       {/*
       <div className="cover-process">
         <div className="cover-cards">
