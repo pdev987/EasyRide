@@ -7,8 +7,8 @@
 .cover-ai-card {
     display: flex;
     margin: 15px auto;
-    align-items: center;
-    width: 750px;
+    padding: 15px;
+    align-items: c
 
     p {
         color: var(--p-color);
