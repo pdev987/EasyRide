@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"
 import "../styles/carCard.css"
 
 export default function CarCard({ car }) {
-  return (
+  return <>{car &&
     <div className="car-card">
 
       <img className="car-image" src={car.imageUrl} alt={car.name}></img>
@@ -44,5 +44,5 @@ export default function CarCard({ car }) {
       </div>
 
     </div>
-  )
+  }</>
 }

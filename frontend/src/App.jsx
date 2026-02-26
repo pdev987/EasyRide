@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Layout from "./components/Layout"
 import About from "./pages/About"
 import Landing from "./pages/landing/Landing"
+import Ai from "./pages/Ai"
 import Cars from "./pages/cars/Cars"
 import Bookings from "./pages/bookings/Bookings"
 import CarDetail from './pages/cars/CarDetail'
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Landing />} />
+          <Route path="ai" element={<Ai />} />
           <Route path="cars" element={<Cars />} />
           <Route path="cars/:id" element={<CarDetail />} />
           <Route path="bookings/:id?" element={<Bookings />} />

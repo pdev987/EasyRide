@@ -22,7 +22,7 @@ export default function Header() {
       </div>
       <nav>
         <NavLink
-          to="aibot"
+          to="ai"
           style={({ isActive }) => isActive ? activeStyle : null}
         >
           Ai Assistant

@@ -5,12 +5,12 @@ import { tempApiUrl } from "../../App"
 import { FaC, FaPerson, FaRegStar } from "react-icons/fa6"
 import { MdOutlineSettings } from "react-icons/md"
 import { BsFuelPump } from "react-icons/bs"
-import Confetti from "react-confetti"
 import "../../styles/booking.css"
 
 export default function Bookings() {
   const { id } = useParams()
   const [daysInfo, setDaysInfo] = React.useState(null)
+  const [dateError, setDateError] = React.useState(false)
   const [car, setCar] = React.useState([])
   const pricingComponentRef = React.useRef(null)
 
@@ -37,10 +37,18 @@ export default function Bookings() {
     const msDate1 = new Date(date1).getTime()
     const msDate2 = new Date(date2).getTime()
 
-    const difference = Math.abs(msDate1 - msDate2)
+    const difference = msDate2 - msDate1
+
+    if (difference < 0) {
+      setDateError(true)
+      return null
+    }
 
     const differenceInDays = Math.ceil(difference / (1000 * 60 * 60 * 24))
 
+    if (differenceInDays === 0) {
+      return 1
+    }
     return differenceInDays
   }
 
@@ -49,14 +57,17 @@ export default function Bookings() {
     const date1 = e.target[1].value
     const date2 = e.target[3].value
     const differenceDays = calculateDaysDifference(date1, date2)
-    const dateObject = {
-      "date1": date1,
-      "date2": date2,
-      "difference": differenceDays
+    if (differenceDays !== null) {
+      setDateError(false)
+      const dateObject = {
+        "date1": date1,
+        "date2": date2,
+        "difference": differenceDays
+      }
+      setDaysInfo(dateObject)
     }
-    setDaysInfo(dateObject)
-
   }
+
   return (
     < div className="bookings-main-container" >
 
@@ -65,6 +76,7 @@ export default function Bookings() {
         <div className="container-block-0">
           <h1>Complete Your Booking</h1>
           <p>Review your selection and provide rental details to finalize your reservation.</p>
+          {dateError && <p className="error-date-paragraph">Wrong dates Choosed. You cant take car in future. Please select Dates Properly.</p>}
         </div>
 
         <div className="test-container">
@@ -106,11 +118,11 @@ export default function Bookings() {
             <form onSubmit={handleDateSelection}>
               <fieldset>
                 <label htmlFor="pickDate">Pick Up</label>
-                <input id="pickDate" placeholder="Pickup Date" name="pick-up" type="date" required />
+                <input id="pickDate" placeholder="Pickup Date" name="pick-up" type="date" min={new Date().toISOString().split("T")[0]} required />
               </fieldset>
               <fieldset>
                 <label htmlFor="dropDate">Drop Off</label>
-                <input id="dropDate" placeholder="Drop Date" name="drop-date" type='date' required />
+                <input id="dropDate" placeholder="Drop Date" name="drop-date" type='date' min={new Date().toISOString().split("T")[0]} required />
               </fieldset>
               <button>Select Dates</button>
             </form>
@@ -138,7 +150,11 @@ export default function Bookings() {
           </div>
           }
         </div>
-      </> : <h1>Select the Car to Book. Please visit the "Cars" page.</h1>
+      </> : <>
+        <h2>Please visit the "Cars" page to select the car.</h2>
+        <h4>Or use</h4>
+        <h1>AI assistant to easily find suitable car.</h1>
+      </>
       }
     </div >
 

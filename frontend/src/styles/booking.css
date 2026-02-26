@@ -36,6 +36,11 @@
     margin-top: 0;
 }
 
+.container-block-0 .error-date-paragraph {
+    color: red;
+    text-align: center;
+}
+
 .schedule-container {
     display: flex;
     padding: 15px;
@@ -164,8 +169,3 @@
         }
     }
 }
-
-
-/*.container-block-1 {
-    justify-self: center;
-}*/
