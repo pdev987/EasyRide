@@ -4,8 +4,29 @@ import { MdOutlineSettings } from "react-icons/md"
 import { BsFuelPump } from "react-icons/bs"
 import { Link } from "react-router-dom"
 import "../styles/carCard.css"
+import { base_url } from "../api"
 
-export default function CarCard({ car }) {
+export default function CarCard({ car, id }) {
+
+  const [carById, setCarById] = React.useState(null)
+
+  React.useEffect(() => {
+    if (id) {
+      const url = `${base_url}/car/${id}`
+      console.log(url)
+      fetch(url)
+        .then(resp => resp.json())
+        .then(data => {
+          console.log(data)
+          setCarById(data)
+        })
+    }
+  }, [id])
+
+  if (!(carById === null)) {
+    car = carById
+  }
+
   return <>{car &&
     <div className="car-card">
 

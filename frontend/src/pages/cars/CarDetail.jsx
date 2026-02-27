@@ -3,7 +3,9 @@ import { FaPerson, FaRegStar } from "react-icons/fa6"
 import { MdOutlineSettings } from "react-icons/md"
 import { BsFuelPump } from "react-icons/bs"
 import { useParams } from "react-router-dom"
-import { tempApiUrl } from "../../App"
+
+import { base_url } from "../../api"
+
 import { Link } from "react-router-dom"
 import "../../styles/carDetail.css"
 
@@ -14,7 +16,7 @@ export default function CarDetail() {
   const [error, setError] = React.useState(null)
 
   React.useEffect(() => {
-    const url = `${tempApiUrl}/api/v1/car/${id}`
+    const url = `${base_url}/car/${id}`
     setLoading(true)
     fetch(url)
       .then(resp => resp.json())

@@ -1,7 +1,8 @@
 import React from "react";
 import Markdown from "react-markdown";
 import CarCard from "../components/CarCard";
-import { tempApiUrl } from "../App";
+
+import { base_url } from "../api";
 import "../styles/ai.css"
 
 export default function ChatApp() {
@@ -24,13 +25,29 @@ export default function ChatApp() {
 
   const streamingBotIndex = React.useRef(null);
 
+  console.log(`Thread id is ${threadId}`)
+  React.useEffect(() => {
+    let savedThreadId = sessionStorage.getItem("thread_id");
+
+    if (savedThreadId) {
+      setThreadId(savedThreadId);
+    } else {
+      fetch(base_url + "/threadid")
+        .then((res) => res.json())
+        .then((data) => {
+          sessionStorage.setItem("thread_id", data.threadId);
+          setThreadId(data.threadId);
+        });
+    }
+
+  }, []);
 
   React.useEffect(() => {
     sessionStorage.setItem("chat_messages", JSON.stringify(messages))
   }, [messages])
 
   React.useState(() => {
-    const url = `${tempApiUrl}/api/v1/car/1`
+    const url = `${base_url}/car/1`
     fetch(url)
       .then(resp => resp.json())
       .then(data => {
@@ -39,20 +56,20 @@ export default function ChatApp() {
       })
   }, [])
 
-  React.useEffect(() => {
-    fetch("http://127.0.0.1:8080/threadid")
-      .then(res => res.json())
-      .then(data => {
-        setThreadId(data.threadId)
-      })
-    // }
-  }, [])
+  // React.useEffect(() => {
+  //   fetch("http://127.0.0.1:8080/threadid")
+  //     .then(res => res.json())
+  //     .then(data => {
+  //       setThreadId(data.threadId)
+  //     })
+  //   // }
+  // }, [])
 
   React.useEffect(() => {
     if (!threadId) {
       return
     }
-    ws.current = new WebSocket("ws://127.0.0.1:8080/ws/chat");
+    ws.current = new WebSocket(`${base_url}/ws/chat`);
 
     ws.current.onopen = () => {
       console.log("ws connection open")
@@ -75,10 +92,12 @@ export default function ChatApp() {
         if (data.event === "car_component") {
           // setIsStreaming(true)
           // save the recomended car to refernce
+          console.log(data)
           recomendedCarRef.current = null
           recomendedCarRef.current = {
             type: "car_component",
             sender: "bot",
+            id: data.id
           };
         } else {
           if (data.event === "text_delta") {
@@ -114,9 +133,9 @@ export default function ChatApp() {
           // setIsStreaming(false)
           streamingBotIndex.current = null;
           if (recomendedCarRef.current !== null) {
-            const carComonentInfo = recomendedCarRef.current
+            const carComponentInfo = recomendedCarRef.current
             setMessages(prev => {
-              const updated = [...prev, carComonentInfo]
+              const updated = [...prev, carComponentInfo]
               recomendedCarRef.current = null
               return updated
             })
@@ -129,6 +148,7 @@ export default function ChatApp() {
     };
 
     return () => {
+      ws.onmessage = null
       console.log("Closing ws")
       if (ws.current) {
         ws.current.onopen = null
@@ -191,7 +211,7 @@ export default function ChatApp() {
         {messages.map((msg, idx) => (
           <div key={idx} className={`message ${msg.sender}`}>
             {msg.type === "car_component" ? (
-              <CarCard car={car} />) : (
+              <CarCard id={msg.id} />) : (
               <Markdown>{msg.text}</Markdown>
             )
             }

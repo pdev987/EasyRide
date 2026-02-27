@@ -1,7 +1,7 @@
 import React from "react"
 import { FaCalendarAlt } from "react-icons/fa"
 import { useParams } from "react-router-dom"
-import { tempApiUrl } from "../../App"
+import { base_url } from "../../api"
 import { FaC, FaPerson, FaRegStar } from "react-icons/fa6"
 import { MdOutlineSettings } from "react-icons/md"
 import { BsFuelPump } from "react-icons/bs"
@@ -11,14 +11,17 @@ export default function Bookings() {
   const { id } = useParams()
   const [daysInfo, setDaysInfo] = React.useState(null)
   const [dateError, setDateError] = React.useState(false)
+  const [isBooked, setIsBooked] = React.useState(false)
   const [car, setCar] = React.useState([])
   const pricingComponentRef = React.useRef(null)
 
   React.useEffect(() => {
-    const url = `${tempApiUrl}/api/v1/car/${id}`
+    const url = `${base_url}/car/${id}`
+    console.log(url)
     fetch(url)
       .then(resp => resp.json())
       .then(data => {
+        console.log(data)
         setCar(data)
       })
   }, [id])
@@ -132,6 +135,10 @@ export default function Bookings() {
         <div className="container-block-2">
           {daysInfo && <div ref={pricingComponentRef}>
             <h3>Price Summary</h3>
+            <div className="car-price">
+              <p>Car Price/day</p>
+              <p>{car.price}</p>
+            </div>
             <div className="pick-date">
               <p>Pick Up Date</p>
               <p>{daysInfo.date1}</p>
@@ -146,7 +153,7 @@ export default function Bookings() {
               <p>{`\u20B9${car.price * daysInfo.difference}`}</p>
             </div>
 
-            <button>Confirm Booking</button>
+            <button onClick={() => setIsBooked(true)} disabled={isBooked}> {isBooked ? "Thank you for Booking" : "Confirm Booking"}</button>
           </div>
           }
         </div>

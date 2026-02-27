@@ -1,7 +1,7 @@
 import React from "react"
 import { useSearchParams, Link } from "react-router-dom"
 import CarCard from "../../components/CarCard"
-import { tempApiUrl } from "../../App"
+import { base_url } from "../../api"
 import "../../styles/cars.css"
 
 export default function Cars() {
@@ -12,14 +12,17 @@ export default function Cars() {
   const [error, setError] = React.useState(null)
 
   const carTypeFilter = searchParams.get("carType")
+  console.log(carTypeFilter)
 
   React.useEffect(() => {
-    const url = `${tempApiUrl}/api/v1/getcars/9`
+    const url = `${base_url}/cars?limit=50`
+    console.log(url)
     setLoadingPage(true)
     fetch(url)
       .then(resp => resp.json())
       .then(data => {
         setCars(data)
+        console.log(data)
         setLoadingPage(false)
       }).catch((e) => setError(e))
   }, [])
@@ -54,29 +57,29 @@ export default function Cars() {
       <h1>Explore our fleet of {cars.length} cars.</h1>
       <div className="cars-type-filter-buttons">
         <button
-          onClick={() => handleCarTypeFilter("carType", "sedan")}
+          onClick={() => handleCarTypeFilter("carType", "Sedan")}
           className={
-            `car-type ${carTypeFilter === "sedan" ? "button-selected" : ""}`
+            `car-type ${carTypeFilter === "Sedan" ? "button-selected" : ""}`
           }
         >Sedan</button>
         <button
-          onClick={() => handleCarTypeFilter("carType", "suv")}
+          onClick={() => handleCarTypeFilter("carType", "SUV")}
           className={
-            `car-type ${carTypeFilter === "suv" ? "button-selected" : ""}`
+            `car-type ${carTypeFilter === "SUV" ? "button-selected" : ""}`
           }
         >SUV</button>
         <button
-          onClick={() => handleCarTypeFilter("carType", "hatchBack")}
+          onClick={() => handleCarTypeFilter("carType", "Hatchback")}
           className={
-            `car-type ${carTypeFilter === "hatchBack" ? "button-selected" : ""}`
+            `car-type ${carTypeFilter === "Hatchback" ? "button-selected" : ""}`
           }
         >HatchBack</button>
-        <button
+        {/* <button
           onClick={() => handleCarTypeFilter("carType", "electric")}
           className={
             `car-type ${carTypeFilter === "electric" ? "button-selected" : ""}`
           }
-        >Electric</button>
+        >Electric</button>*/}
 
         {carTypeFilter
           ? (<button onClick={() => handleCarTypeFilter("carType", null)} className="car-type clear-filters">Clear Filters</button>) :

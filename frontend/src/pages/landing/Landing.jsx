@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 import coverImage from "../../assets/coverImage.webp"
 import "../../styles/landing.css"
 import CarCard from "../../components/CarCard"
-import { tempApiUrl } from "../../App"
+import { base_url } from "../../api"
 
 export default function Landing() {
   const [cars, setCars] = React.useState([])
@@ -12,7 +12,7 @@ export default function Landing() {
   const [error, setError] = React.useState(null)
 
   React.useEffect(() => {
-    const url = `${tempApiUrl}/api/v1/getcars/3`
+    const url = `${base_url}/cars?limit=3`
     setLoading(true)
     fetch(url)
       .then(resp => resp.json())
@@ -22,7 +22,7 @@ export default function Landing() {
       }).catch((e) => setError(e))
   }, [])
 
-  const carFleetCards = cars.map(car => <CarCard key={car.id} car={car} />)
+  const carFleetCards = cars.map((car, index) => <CarCard key={index} car={car} />)
   if (loading) {
     return <h1>Loading</h1>
   }

@@ -127,6 +127,7 @@
     }
 
     .pick-date,
+    .car-price,
     .drop-date {
         display: flex;
         justify-content: space-between;
@@ -148,6 +149,11 @@
     button:hover {
         transform: translate(1px, 1px);
         transition: transform 0.1s ease-in-out;
+    }
+
+    button:disabled {
+        background-color: lightpink;
+        color: black;
     }
 
     .total-pricing {
