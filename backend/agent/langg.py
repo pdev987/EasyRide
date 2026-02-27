@@ -2,7 +2,7 @@ from langchain.agents import create_agent
 from langchain_ollama import ChatOllama
 from langgraph.checkpoint.memory import InMemorySaver
 from langchain.messages import SystemMessage, HumanMessage, AIMessageChunk, ToolMessage
-from langg_tools import tools
+from agent.langg_tools import tools
 
 system_prompt = SystemMessage("""
     You are a dedicated car RENTAL RECOMMENDATION ASSISTANT for company EasyRent.

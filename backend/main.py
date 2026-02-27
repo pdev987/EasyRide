@@ -3,8 +3,8 @@ import os
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
-from car_paths import car_router
-from chat_ws_path import ws_router
+from car_end import car_router
+from chat_ws_end import ws_router
 
 app = FastAPI()
 
