@@ -38,138 +38,57 @@ def database_metadata():
 
 
 @tool
-def get_by_seats(noseats: int, num_of_cars: int = None):
+def filter_cars(
+    seats: int = None,
+    min_price: float = None,
+    max_price: float = None,
+    fueltype: str = None,
+    cartype: str = None,
+    gearboxtype: str = None,
+    min_review: float = None,
+    limit: int = 5
+):
     """
-    Filter cars by number of seats.
-
-    Args:
-        noseats (int): Number of seats the car must have.
-        num_of_cars (int, optional): Maximum number of cars to return. If None, return all matching cars.
-
-    Returns:
-        list[dict]: List of car dictionaries matching the seat requirement.
-                    Each dict contains keys like id, name, price, cartype, fueltype, gearboxtype, review.
-                    Returns a message string if no cars match.
+    Filter cars based on user requirements.
+    Return list of matching cars.
+    Always returns list of dictionaries.
     """
-    temp_df = df[df["noSeats"] == noseats]
-    if temp_df.empty:
-        return "No cars available with this number of seats"
-    if num_of_cars is not None and num_of_cars < len(temp_df):
-        temp_df = temp_df.iloc[:num_of_cars]
-    return temp_df.to_dict()
 
-
-# -----------------------
-# Filter by Car Type
-# -----------------------
-@tool
-def get_by_cartype(cartype: str, num_of_cars: int = None):
-    """
-    Filter cars by car type.
-
-    Args:
-        cartype (str): Car type to filter (e.g., SUV, Sedan, Hatchback).
-        num_of_cars (int, optional): Maximum number of cars to return.
-
-    Returns:
-        list[dict]: List of car dictionaries of the given car type.
-                    Returns a message string if no cars match.
-    """
-    temp_df = df[df["carType"] == cartype]
-    if temp_df.empty:
-        return "No cars available of this type"
-    if num_of_cars is not None and num_of_cars < len(temp_df):
-        temp_df = temp_df.iloc[:num_of_cars]
-    return temp_df.to_dict()
-
-
-@tool
-def get_by_fueltype(fueltype: str, num_of_cars: int = None):
-    """
-    Filter cars by fuel type.
-
-    Args:
-        fueltype (str): Fuel type to filter (e.g., Petrol, Diesel, Electric).
-        num_of_cars (int, optional): Maximum number of cars to return.
-
-    Returns:
-        list[dict]: List of car dictionaries matching the fuel type.
-                    Returns a message string if no cars match.
-    """
-    temp_df = df[df["fuelType"] == fueltype]
-    if temp_df.empty:
-        return "No cars available with this fuel type"
-    if num_of_cars is not None and num_of_cars < len(temp_df):
-        temp_df = temp_df.iloc[:num_of_cars]
-    return temp_df.to_dict(orient="records")
-
-
-@tool
-def get_by_gearboxtype(gearboxtype: str, num_of_cars: int = None):
-    """
-    Filter cars by gearbox type.
-
-    Args:
-        gearboxtype (str): Gearbox type to filter (e.g., Automatic, Manual).
-        num_of_cars (int, optional): Maximum number of cars to return.
-
-    Returns:
-        list[dict]: List of car dictionaries matching the gearbox type.
-                    Returns a message string if no cars match.
-    """
-    temp_df = df[df["gearBoxType"] == gearboxtype]
-    if temp_df.empty:
-        return "No cars available with this gearbox type"
-    if num_of_cars is not None and num_of_cars < len(temp_df):
-        temp_df = temp_df.iloc[:num_of_cars]
-    return temp_df.to_dict(orient="records")
-
-
-@tool
-def get_by_price(min_price: float = None, max_price: float = None, num_of_cars: int = None):
-    """
-    Filter cars by price range.
-
-    Args:
-        min_price (float, optional): Minimum price to filter.
-        max_price (float, optional): Maximum price to filter.
-        num_of_cars (int, optional): Maximum number of cars to return.
-
-    Returns:
-        list[dict]: List of car dictionaries within the given price range.
-                    Returns a message string if no cars match.
-    """
     temp_df = df.copy()
+
+    if seats is not None:
+        if seats <= 0:
+            return []
+        temp_df = temp_df[temp_df["noSeats"] == seats]
+
     if min_price is not None:
+        if min_price < 0:
+            return []
         temp_df = temp_df[temp_df["price"] >= min_price]
+
     if max_price is not None:
+        if max_price < 0:
+            return []
         temp_df = temp_df[temp_df["price"] <= max_price]
+
+    if fueltype is not None:
+        temp_df = temp_df[temp_df["fuelType"] == fueltype]
+
+    if cartype is not None:
+        temp_df = temp_df[temp_df["carType"] == cartype]
+
+    if gearboxtype is not None:
+        temp_df = temp_df[temp_df["gearBoxType"] == gearboxtype]
+
+    if min_review is not None:
+        if not (0 <= min_review <= 5):
+            return []
+        temp_df = temp_df[temp_df["review"] >= min_review]
+
     if temp_df.empty:
-        return "No cars available in this price range"
-    if num_of_cars is not None and num_of_cars < len(temp_df):
-        temp_df = temp_df.iloc[:num_of_cars]
-    return temp_df.to_dict(orient="records")
+        return []
 
-
-@tool
-def get_by_review(min_review: float, num_of_cars: int = None):
-    """
-    Filter cars by minimum review score.
-
-    Args:
-        min_review (float): Minimum review score required (e.g., 4.5).
-        num_of_cars (int, optional): Maximum number of cars to return.
-
-    Returns:
-        list[dict]: List of car dictionaries with review >= min_review.
-                    Returns a message string if no cars match.
-    """
-    temp_df = df[df["review"] >= min_review]
-    if temp_df.empty:
-        return "No cars available with this review score"
-    if num_of_cars is not None and num_of_cars < len(temp_df):
-        temp_df = temp_df.iloc[:num_of_cars]
-    return temp_df.to_dict(orient="records")
+    return temp_df.head(limit).to_dict(orient="records")
 
 
 @tool
@@ -199,13 +118,7 @@ def render_car_component_UI(id: int) -> int:
 
 
 tools = [
+    filter_cars,
     render_car_component_UI,
-    company_info,
-    database_metadata,
-    get_by_review,
-    get_by_price,
-    get_by_fueltype,
-    get_by_gearboxtype,
-    get_by_cartype,
-    get_by_seats
+    company_info
 ]

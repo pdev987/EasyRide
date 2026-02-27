@@ -79,7 +79,7 @@ export default function Bookings() {
         <div className="container-block-0">
           <h1>Complete Your Booking</h1>
           <p>Review your selection and provide rental details to finalize your reservation.</p>
-          {dateError && <p className="error-date-paragraph">Wrong dates Choosed. You cant take car in future. Please select Dates Properly.</p>}
+          {dateError && <p className="error-date-paragraph">Wrong dates Choosed.</p>}
         </div>
 
         <div className="test-container">
