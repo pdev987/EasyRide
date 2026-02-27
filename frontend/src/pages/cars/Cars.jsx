@@ -12,17 +12,17 @@ export default function Cars() {
   const [error, setError] = React.useState(null)
 
   const carTypeFilter = searchParams.get("carType")
-  console.log(carTypeFilter)
+  // console.log(carTypeFilter)
 
   React.useEffect(() => {
     const url = `${base_url}/cars?limit=50`
-    console.log(url)
+    // console.log(url)
     setLoadingPage(true)
     fetch(url)
       .then(resp => resp.json())
       .then(data => {
         setCars(data)
-        console.log(data)
+        // console.log(data)
         setLoadingPage(false)
       }).catch((e) => setError(e))
   }, [])

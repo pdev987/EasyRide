@@ -40,9 +40,7 @@
     color: var(--main-font-color);
 }
 
-message.bot::before {
-    background-image: ;
-}
+
 
 .input-container {
     background-color: var(--cards-bg);

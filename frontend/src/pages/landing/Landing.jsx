@@ -35,7 +35,7 @@ export default function Landing() {
     <div className="cover-main-container">
 
       <div className="cover-ai-card">
-        <h2>Book with our New AI Assistant.</h2>
+        <Link to="ai">AI Assistant</Link>
         <p>Get personalized car rental recommendations in seconds.
           Chat with our AI to compare prices,
           see transparent fees and book instantly.

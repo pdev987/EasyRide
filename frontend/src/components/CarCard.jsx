@@ -13,11 +13,11 @@ export default function CarCard({ car, id }) {
   React.useEffect(() => {
     if (id) {
       const url = `${base_url}/car/${id}`
-      console.log(url)
+      // console.log(url)
       fetch(url)
         .then(resp => resp.json())
         .then(data => {
-          console.log(data)
+          // console.log(data)
           setCarById(data)
         })
     }

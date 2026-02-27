@@ -9,7 +9,6 @@ import Cars from "./pages/cars/Cars"
 import Bookings from "./pages/bookings/Bookings"
 import CarDetail from './pages/cars/CarDetail'
 import NotExist from "./pages/NotExist"
-import './styles/App.css'
 
 export const tempApiUrl = "http://localhost:8000"
 

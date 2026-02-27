@@ -25,7 +25,7 @@ export default function ChatApp() {
 
   const streamingBotIndex = React.useRef(null);
 
-  console.log(`Thread id is ${threadId}`)
+  // console.log(`Thread id is ${threadId}`)
   React.useEffect(() => {
     let savedThreadId = sessionStorage.getItem("thread_id");
 
@@ -51,7 +51,7 @@ export default function ChatApp() {
     fetch(url)
       .then(resp => resp.json())
       .then(data => {
-        console.log("the car info is", car)
+        // console.log("the car info is", car)
         setCar(data)
       })
   }, [])
@@ -72,11 +72,11 @@ export default function ChatApp() {
     ws.current = new WebSocket(`${base_url}/ws/chat`);
 
     ws.current.onopen = () => {
-      console.log("ws connection open")
+      // console.log("ws connection open")
     };
 
     ws.current.onclose = () => {
-      console.log("Connection lost, Reconecting")
+      // console.log("Connection lost, Reconecting")
       setTimeout(() => {
         if (threadId) {
           ws.current = new WebSocket("ws//127.0.0.1:8080/ws/chat")
@@ -92,7 +92,7 @@ export default function ChatApp() {
         if (data.event === "car_component") {
           // setIsStreaming(true)
           // save the recomended car to refernce
-          console.log(data)
+          // console.log(data)
           recomendedCarRef.current = null
           recomendedCarRef.current = {
             type: "car_component",
@@ -149,7 +149,7 @@ export default function ChatApp() {
 
     return () => {
       ws.onmessage = null
-      console.log("Closing ws")
+      // console.log("Closing ws")
       if (ws.current) {
         ws.current.onopen = null
         ws.current.onmessage = null
@@ -193,7 +193,7 @@ export default function ChatApp() {
     if (isStreaming === false) {
       if (e.key === "Enter") sendMessage();
     } else {
-      console.log("Cant send message when streaming.")
+      // console.log("Cant send message when streaming.")
     }
   };
 
