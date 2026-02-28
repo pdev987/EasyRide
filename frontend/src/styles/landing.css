@@ -28,7 +28,6 @@
         color: var(--main-font-color);
         padding: 10px;
         margin-right: 15px;
-        background-color: var(--cards-bg);
     }
 
     p {
