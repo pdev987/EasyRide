@@ -61,7 +61,7 @@ def get_car_information_by_id(id: int) -> dict:
     """
     df_filtered = df[df["id"] == id]
     if not df_filtered.empty:
-        return df_filtered.to_dict(orient="record")
+        return df_filtered.to_dict(orient="records")
     else:
         raise ValueError("Invalid car ID selected")
 
@@ -93,5 +93,6 @@ tools = [
     render_car_component_UI,
     company_info,
     database_metadata,
-    get_cars_and_ids
+    get_cars_and_ids,
+    get_car_information_by_id
 ]
