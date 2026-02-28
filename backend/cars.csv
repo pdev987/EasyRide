@@ -1,48 +1,48 @@
 name,imageUrl,noSeats,carType,fuelType,gearBoxType,review,price,description,id
-Tata Nexon,http://localhost:8000/static/images/nexon.webp,5,SUV,Diesel,Manual,4.4,1500,"A compact and stylish SUV with a modern design, perfect for city driving and off-road adventures.",1
-Mahindra XUV700,http://localhost:8000/static/images/xuv700.webp,5,SUV,Petrol,Auto,4.6,3000,"A premium SUV with robust features, offering advanced safety and technology, ideal for family trips.",2
-Maruti Suzuki Swift,http://localhost:8000/static/images/swift.webp,5,Hatchback,Petrol,Manual,4.2,1200,"A compact hatchback known for its fuel efficiency and easy maneuverability, perfect for city roads.",3
-Hyundai Creta,http://localhost:8000/static/images/creta.webp,5,SUV,Diesel,Auto,4.5,2500,"A sleek and powerful SUV with a spacious interior, offering a smooth driving experience.",4
-Tata Altroz,http://localhost:8000/static/images/altroz.webp,5,Hatchback,Petrol,Manual,4.3,1500,A stylish and premium hatchback with spacious interiors and excellent safety features.,5
-Mahindra Thar,http://localhost:8000/static/images/thar.webp,4,SUV,Diesel,Manual,4.7,3500,"A rugged 4x4 SUV with off-road capabilities, perfect for adventure lovers.",6
-Maruti Suzuki Baleno,http://localhost:8000/static/images/baleno.webp,5,Hatchback,Petrol,Auto,4.0,1400,"A spacious and fuel-efficient hatchback, known for its practicality and premium features.",7
-BMW 5 Series,http://localhost:8000/static/images/bmw_5_series.webp,5,Luxury,Petrol,Auto,4.8,8000,"A luxury sedan offering top-tier performance, advanced technology, and a plush interior.",8
-Audi Q7,http://localhost:8000/static/images/audi_q_7.webp,7,SUV,Diesel,Auto,4.7,10000,"A high-end luxury SUV with a refined interior, advanced features, and superior performance.",9
-Mercedes-Benz E-Class,http://localhost:8000/static/images/benz_e_class.webp,5,Luxury,Diesel,Auto,4.6,9000,"A luxurious sedan combining elegance, comfort, and high-end technology.",10
-Tata Harrier,http://localhost:8000/static/images/harrier.webp,5,SUV,Diesel,Auto,4.4,3000,"A bold SUV with a strong road presence, offering great comfort and off-road capabilities.",11
-Hyundai Verna,http://localhost:8000/static/images/verna.webp,5,Sedan,Petrol,Manual,4.3,1800,"A stylish sedan with great performance and fuel efficiency, ideal for daily commutes.",12
-Mahindra Scorpio,http://localhost:8000/static/images/scorpio.webp,7,SUV,Diesel,Manual,4.2,2500,"A tough and reliable SUV with a commanding road presence, perfect for long drives.",13
-Maruti Suzuki Dzire,http://localhost:8000/static/images/dzire.webp,5,Sedan,Petrol,Auto,4.1,1300,"A compact sedan offering great fuel economy and comfortable interiors, ideal for city driving.",14
-Honda City,http://localhost:8000/static/images/city.webp,5,Sedan,Petrol,Manual,4.5,2200,"A spacious sedan with a premium feel, known for its comfort, safety, and reliability.",15
-Skoda Octavia,http://localhost:8000/static/images/octa.webp,5,Sedan,Diesel,Auto,4.6,2500,"A refined sedan with a powerful engine and a luxury-grade interior, perfect for long drives.",16
-BMW X5,http://localhost:8000/static/images/x5.webp,5,SUV,Diesel,Auto,4.7,12000,"A luxury SUV that combines performance, comfort, and cutting-edge technology.",17
-Jaguar F-Pace,http://localhost:8000/static/images/fpace.webp,5,SUV,Diesel,Auto,4.8,15000,"A premium SUV with an elegant design, powerful performance, and advanced features.",18
-Tata Tiago,http://localhost:8000/static/images/tiago.webp,5,Hatchback,Petrol,Manual,4.0,1000,An affordable and practical hatchback with efficient fuel economy and good ride comfort.,19
-Hyundai Tucson,http://localhost:8000/static/images/tuscon.webp,5,SUV,Diesel,Auto,4.4,2500,"A well-rounded SUV offering ample interior space, good performance, and advanced features.",20
-Mercedes-Benz GLC,http://localhost:8000/static/images/glc.webp,5,SUV,Petrol,Auto,4.7,7000,"A luxury SUV with a refined interior, great ride comfort, and top-notch safety features.",21
-Tata Safari,http://localhost:8000/static/images/safari.webp,7,SUV,Diesel,Auto,4.3,3500,"A large SUV offering a spacious cabin, strong performance, and a commanding road presence.",22
-Mahindra Bolero,http://localhost:8000/static/images/bolero.webp,7,SUV,Diesel,Manual,4.1,1800,"A rugged and reliable SUV, known for its durability and off-road capability.",23
-Maruti Suzuki Ertiga,http://localhost:8000/static/images/ertiga.webp,7,MPV,Petrol,Auto,4.2,2000,A versatile multi-purpose vehicle with ample seating and comfort for long journeys.,24
-Audi A4,http://localhost:8000/static/images/a4.webp,5,Luxury,Diesel,Auto,4.5,6000,A compact luxury sedan offering an exceptional driving experience with a refined cabin.,25
-Kia Seltos,http://localhost:8000/static/images/seltos.webp,5,SUV,Petrol,Auto,4.6,2800,"A stylish and feature-packed SUV, offering a great mix of performance and comfort.",26
-BMW X3,http://localhost:8000/static/images/x3.webp,5,SUV,Diesel,Auto,4.7,9000,"A luxury SUV offering dynamic handling, a premium cabin, and advanced tech features.",27
-Ford EcoSport,http://localhost:8000/static/images/eco.webp,5,SUV,Petrol,Manual,4.1,1600,"A compact and efficient SUV with excellent driving dynamics, ideal for city roads.",28
-Toyota Fortuner,http://localhost:8000/static/images/fortuner.webp,7,SUV,Diesel,Auto,4.7,6000,"A premium SUV with a bold presence, offering powerful performance and off-road capabilities.",29
-Honda Amaze,http://localhost:8000/static/images/amaze.webp,5,Sedan,Petrol,Manual,4.3,1200,A compact sedan offering good value for money with a comfortable ride and fuel efficiency.,30
-Mahindra XUV300,http://localhost:8000/static/images/xuv300.webp,5,SUV,Petrol,Auto,4.2,1800,"A compact SUV with good performance, modern features, and a solid build.",31
-Renault Duster,http://localhost:8000/static/images/duster.webp,5,SUV,Petrol,Manual,4.3,2200,"A compact SUV known for its rugged design, spacious cabin, and great value for money.",32
-Nissan Magnite,http://localhost:8000/static/images/magnite.webp,5,SUV,Petrol,Manual,4.1,1200,A budget-friendly compact SUV offering a stylish design and practical features.,33
-Honda WR-V,http://localhost:8000/static/images/wrv.webp,5,SUV,Petrol,Auto,4.2,1600,"A compact SUV offering great fuel efficiency, comfort, and a higher driving position.",34
-Toyota Innova Crysta,http://localhost:8000/static/images/crysta.webp,7,MPV,Diesel,Auto,4.6,4000,"A spacious multi-purpose vehicle with premium features, ideal for family trips and group travel.",35
-Skoda Superb,http://localhost:8000/static/images/superb.webp,5,Luxury,Diesel,Auto,4.6,7000,"A luxury sedan with superior comfort, high-end technology, and refined interiors.",36
-Volvo XC90,http://localhost:8000/static/images/volvo.webp,7,SUV,Diesel,Auto,4.8,15000,"A luxury SUV with a stylish design, advanced safety features, and a luxurious interior.",37
-Maruti Suzuki WagonR,http://localhost:8000/static/images/waganor.webp,5,Hatchback,Petrol,Manual,4.0,1000,A compact and affordable hatchback offering practical features and a comfortable ride.,38
-Hyundai i20,http://localhost:8000/static/images/i20.webp,5,Hatchback,Diesel,Auto,4.4,1600,"A premium hatchback with modern features, offering a comfortable and efficient ride.",39
-BMW M5,http://localhost:8000/static/images/m5.webp,5,Luxury,Petrol,Auto,4.9,12000,"A high-performance luxury sedan offering exhilarating speed, advanced tech, and superb comfort.",40
-Audi A6,http://localhost:8000/static/images/a6.webp,5,Luxury,Diesel,Auto,4.7,8000,"A luxury sedan combining comfort, performance, and technology for an exceptional driving experience.",41
-Tata Tigor,http://localhost:8000/static/images/tigor.webp,5,Sedan,Petrol,Manual,4.2,1400,"A compact sedan offering great value for money, with stylish looks and a comfortable ride.",42
-Ford Endeavour,http://localhost:8000/static/images/endo.webp,7,SUV,Diesel,Auto,4.6,5000,"A premium SUV with off-road capabilities, offering luxury, performance, and comfort.",43
-Mahindra Marazzo,http://localhost:8000/static/images/mor.webp,7,MPV,Diesel,Manual,4.4,2500,A well-designed MPV offering a spacious cabin and comfort for family journeys.,44
-Maruti Suzuki Celerio,http://localhost:8000/static/images/celerio.webp,5,Hatchback,Petrol,Auto,4.1,900,An affordable hatchback offering great fuel efficiency and a smooth driving experience.,45
-Hyundai Santro,http://localhost:8000/static/images/santro.webp,5,Hatchback,Petrol,Manual,4.0,700,"A budget-friendly hatchback, perfect for city driving and known for its reliability.",46
-Renault Kwid,http://localhost:8000/static/images/kwid.webp,5,Hatchback,Petrol,Manual,4.0,600,"An entry-level hatchback with a stylish design, offering great mileage and compact size.",47
+Tata Nexon,/static/images/nexon.webp,5,SUV,Diesel,Manual,4.4,1500,"A compact and stylish SUV with a modern design, perfect for city driving and off-road adventures.",1
+Mahindra XUV700,/static/images/xuv700.webp,5,SUV,Petrol,Auto,4.6,3000,"A premium SUV with robust features, offering advanced safety and technology, ideal for family trips.",2
+Maruti Suzuki Swift,/static/images/swift.webp,5,Hatchback,Petrol,Manual,4.2,1200,"A compact hatchback known for its fuel efficiency and easy maneuverability, perfect for city roads.",3
+Hyundai Creta,/static/images/creta.webp,5,SUV,Diesel,Auto,4.5,2500,"A sleek and powerful SUV with a spacious interior, offering a smooth driving experience.",4
+Tata Altroz,/static/images/altroz.webp,5,Hatchback,Petrol,Manual,4.3,1500,A stylish and premium hatchback with spacious interiors and excellent safety features.,5
+Mahindra Thar,/static/images/thar.webp,4,SUV,Diesel,Manual,4.7,3500,"A rugged 4x4 SUV with off-road capabilities, perfect for adventure lovers.",6
+Maruti Suzuki Baleno,/static/images/baleno.webp,5,Hatchback,Petrol,Auto,4.0,1400,"A spacious and fuel-efficient hatchback, known for its practicality and premium features.",7
+BMW 5 Series,/static/images/bmw_5_series.webp,5,Luxury,Petrol,Auto,4.8,8000,"A luxury sedan offering top-tier performance, advanced technology, and a plush interior.",8
+Audi Q7,/static/images/audi_q_7.webp,7,SUV,Diesel,Auto,4.7,10000,"A high-end luxury SUV with a refined interior, advanced features, and superior performance.",9
+Mercedes-Benz E-Class,/static/images/benz_e_class.webp,5,Luxury,Diesel,Auto,4.6,9000,"A luxurious sedan combining elegance, comfort, and high-end technology.",10
+Tata Harrier,/static/images/harrier.webp,5,SUV,Diesel,Auto,4.4,3000,"A bold SUV with a strong road presence, offering great comfort and off-road capabilities.",11
+Hyundai Verna,/static/images/verna.webp,5,Sedan,Petrol,Manual,4.3,1800,"A stylish sedan with great performance and fuel efficiency, ideal for daily commutes.",12
+Mahindra Scorpio,/static/images/scorpio.webp,7,SUV,Diesel,Manual,4.2,2500,"A tough and reliable SUV with a commanding road presence, perfect for long drives.",13
+Maruti Suzuki Dzire,/static/images/dzire.webp,5,Sedan,Petrol,Auto,4.1,1300,"A compact sedan offering great fuel economy and comfortable interiors, ideal for city driving.",14
+Honda City,/static/images/city.webp,5,Sedan,Petrol,Manual,4.5,2200,"A spacious sedan with a premium feel, known for its comfort, safety, and reliability.",15
+Skoda Octavia,/static/images/octa.webp,5,Sedan,Diesel,Auto,4.6,2500,"A refined sedan with a powerful engine and a luxury-grade interior, perfect for long drives.",16
+BMW X5,/static/images/x5.webp,5,SUV,Diesel,Auto,4.7,12000,"A luxury SUV that combines performance, comfort, and cutting-edge technology.",17
+Jaguar F-Pace,/static/images/fpace.webp,5,SUV,Diesel,Auto,4.8,15000,"A premium SUV with an elegant design, powerful performance, and advanced features.",18
+Tata Tiago,/static/images/tiago.webp,5,Hatchback,Petrol,Manual,4.0,1000,An affordable and practical hatchback with efficient fuel economy and good ride comfort.,19
+Hyundai Tucson,/static/images/tuscon.webp,5,SUV,Diesel,Auto,4.4,2500,"A well-rounded SUV offering ample interior space, good performance, and advanced features.",20
+Mercedes-Benz GLC,/static/images/glc.webp,5,SUV,Petrol,Auto,4.7,7000,"A luxury SUV with a refined interior, great ride comfort, and top-notch safety features.",21
+Tata Safari,/static/images/safari.webp,7,SUV,Diesel,Auto,4.3,3500,"A large SUV offering a spacious cabin, strong performance, and a commanding road presence.",22
+Mahindra Bolero,/static/images/bolero.webp,7,SUV,Diesel,Manual,4.1,1800,"A rugged and reliable SUV, known for its durability and off-road capability.",23
+Maruti Suzuki Ertiga,/static/images/ertiga.webp,7,MPV,Petrol,Auto,4.2,2000,A versatile multi-purpose vehicle with ample seating and comfort for long journeys.,24
+Audi A4,/static/images/a4.webp,5,Luxury,Diesel,Auto,4.5,6000,A compact luxury sedan offering an exceptional driving experience with a refined cabin.,25
+Kia Seltos,/static/images/seltos.webp,5,SUV,Petrol,Auto,4.6,2800,"A stylish and feature-packed SUV, offering a great mix of performance and comfort.",26
+BMW X3,/static/images/x3.webp,5,SUV,Diesel,Auto,4.7,9000,"A luxury SUV offering dynamic handling, a premium cabin, and advanced tech features.",27
+Ford EcoSport,/static/images/eco.webp,5,SUV,Petrol,Manual,4.1,1600,"A compact and efficient SUV with excellent driving dynamics, ideal for city roads.",28
+Toyota Fortuner,/static/images/fortuner.webp,7,SUV,Diesel,Auto,4.7,6000,"A premium SUV with a bold presence, offering powerful performance and off-road capabilities.",29
+Honda Amaze,/static/images/amaze.webp,5,Sedan,Petrol,Manual,4.3,1200,A compact sedan offering good value for money with a comfortable ride and fuel efficiency.,30
+Mahindra XUV300,/static/images/xuv300.webp,5,SUV,Petrol,Auto,4.2,1800,"A compact SUV with good performance, modern features, and a solid build.",31
+Renault Duster,/static/images/duster.webp,5,SUV,Petrol,Manual,4.3,2200,"A compact SUV known for its rugged design, spacious cabin, and great value for money.",32
+Nissan Magnite,/static/images/magnite.webp,5,SUV,Petrol,Manual,4.1,1200,A budget-friendly compact SUV offering a stylish design and practical features.,33
+Honda WR-V,/static/images/wrv.webp,5,SUV,Petrol,Auto,4.2,1600,"A compact SUV offering great fuel efficiency, comfort, and a higher driving position.",34
+Toyota Innova Crysta,/static/images/crysta.webp,7,MPV,Diesel,Auto,4.6,4000,"A spacious multi-purpose vehicle with premium features, ideal for family trips and group travel.",35
+Skoda Superb,/static/images/superb.webp,5,Luxury,Diesel,Auto,4.6,7000,"A luxury sedan with superior comfort, high-end technology, and refined interiors.",36
+Volvo XC90,/static/images/volvo.webp,7,SUV,Diesel,Auto,4.8,15000,"A luxury SUV with a stylish design, advanced safety features, and a luxurious interior.",37
+Maruti Suzuki WagonR,/static/images/waganor.webp,5,Hatchback,Petrol,Manual,4.0,1000,A compact and affordable hatchback offering practical features and a comfortable ride.,38
+Hyundai i20,/static/images/i20.webp,5,Hatchback,Diesel,Auto,4.4,1600,"A premium hatchback with modern features, offering a comfortable and efficient ride.",39
+BMW M5,/static/images/m5.webp,5,Luxury,Petrol,Auto,4.9,12000,"A high-performance luxury sedan offering exhilarating speed, advanced tech, and superb comfort.",40
+Audi A6,/static/images/a6.webp,5,Luxury,Diesel,Auto,4.7,8000,"A luxury sedan combining comfort, performance, and technology for an exceptional driving experience.",41
+Tata Tigor,/static/images/tigor.webp,5,Sedan,Petrol,Manual,4.2,1400,"A compact sedan offering great value for money, with stylish looks and a comfortable ride.",42
+Ford Endeavour,/static/images/endo.webp,7,SUV,Diesel,Auto,4.6,5000,"A premium SUV with off-road capabilities, offering luxury, performance, and comfort.",43
+Mahindra Marazzo,/static/images/mor.webp,7,MPV,Diesel,Manual,4.4,2500,A well-designed MPV offering a spacious cabin and comfort for family journeys.,44
+Maruti Suzuki Celerio,/static/images/celerio.webp,5,Hatchback,Petrol,Auto,4.1,900,An affordable hatchback offering great fuel efficiency and a smooth driving experience.,45
+Hyundai Santro,/static/images/santro.webp,5,Hatchback,Petrol,Manual,4.0,700,"A budget-friendly hatchback, perfect for city driving and known for its reliability.",46
+Renault Kwid,/static/images/kwid.webp,5,Hatchback,Petrol,Manual,4.0,600,"An entry-level hatchback with a stylish design, offering great mileage and compact size.",47
