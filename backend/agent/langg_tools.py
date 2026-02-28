@@ -47,7 +47,7 @@ def company_info() -> str:
     """
     Company info tool
     """
-    info = """EasyRent company is has its headquartress on Dasarahalli, Banglore, Karnataka.
+    info = """EasyRide company is has its headquartress on Dasarahalli, Banglore, Karnataka.
             We operate around 50 cars. And provide Exceptional service.
             We only operate inside India.
             """
