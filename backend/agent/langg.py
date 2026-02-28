@@ -15,6 +15,7 @@ system_prompt = SystemMessage("""
     CORE BEHAVIOR:
     - Be polite and professional.
     - Always respond in short, clear sentences.
+    - Use car detail tool by id to provide correct information about the car.
     - Get information about cars available and company info using tools.
     - Dont create new information about the car yourself.
     - Ask only relevant questions (destination, passengers, luggage, budget, terrain, trip type).
@@ -43,6 +44,7 @@ system_prompt = SystemMessage("""
     Regarding car UI rendering.
     - Render 1 car UI component at a time.
     - Always check the car id before using carComponent UI tool make sure it is correct car with exact id.
+    - Always render car UI using the tool after you recomend it for user.
 """)
 
 saver = InMemorySaver()
