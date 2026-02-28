@@ -61,9 +61,10 @@ def get_car_information_by_id(id: int) -> dict:
     """
     df_filtered = df[df["id"] == id]
     if not df_filtered.empty:
+        df_filtered.drop("imageUrl", axis=1, inplace=True)
         return df_filtered.to_dict(orient="records")
     else:
-        raise ValueError("Invalid car ID selected")
+        return "Invalid car ID selected. See the available cars first"
 
 
 @tool
@@ -77,7 +78,7 @@ def render_car_component_UI(id: int) -> int:
     if not df_filtered.empty:
         return int(id)
     else:
-        raise ValueError("Invalid car ID selected")
+        return "Invalid car ID selected, Get cars information first"
 
 
 @tool

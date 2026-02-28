@@ -1,6 +1,6 @@
 import pandas as pd
 from fastapi import APIRouter
-from pydantic import BaseModel, HttpUrl
+from pydantic import BaseModel
 from typing import Literal, List
 
 car_df = pd.read_csv("cars.csv")
@@ -12,7 +12,7 @@ car_router = APIRouter(prefix="/api/v1")
 class CarInfo(BaseModel):
     id: int
     name: str
-    imageUrl: HttpUrl
+    imageUrl: str
     noSeats: int
     carType: Literal['SUV', 'Hatchback', 'Luxury', 'Sedan', 'MPV']
     fuelType: Literal["Diesel", "Petrol"]
