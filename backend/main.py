@@ -3,12 +3,15 @@ import os
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
 from car_end import car_router
 from chat_ws_end import ws_router
 
 app = FastAPI()
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
+app.mount("/assets", StaticFiles(directory="dist/assets/"), name="assets")
+# app.mount("/", StaticFiles(directory=("dist")), name="react")
 
 app.add_middleware(
     CORSMiddleware,
@@ -19,6 +22,14 @@ app.add_middleware(
 
 app.include_router(car_router)
 app.include_router(ws_router)
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
+dist_path = os.path.join(current_dir, "dist")
+
+
+@app.get("/{full_path:path}")
+def serve_react_app(full_path: str):
+    return FileResponse(os.path.join(dist_path, "index.html"))
 
 
 # ==================== delete checkpoint every 2 hr============

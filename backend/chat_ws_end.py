@@ -18,7 +18,7 @@ async def get_thread_id():
 
 
 THREAD_TTL_MINUTES = 10
-CLEANUP_INTERVAL_SECONDS = 120  # 2 minutes
+CLEANUP_INTERVAL_SECONDS = 60 * 10  # 10 minutes
 
 # dictionary to store thread and its lastactive timestamp
 thread_activity: dict[str, datetime] = {}
@@ -69,13 +69,16 @@ async def chat_ws(websocket: WebSocket):
             thread_activity[thread_id] = datetime.utcnow()
 
             # Stream response from agent
-            async for token, _ in agent.astream(
+            async for token, metadata in agent.astream(
                 {"messages": [{"role": "user", "content": message_text}]},
                 {"configurable": {"thread_id": thread_id}},
                 stream_mode="messages",
             ):
                 # Update thread activity on every token
                 thread_activity[thread_id] = datetime.utcnow()
+
+                if metadata.get("langgraph_node") == "SummarizationMiddleware.before_model":
+                    continue
 
                 if isinstance(token, ToolMessage):
                     print(token)

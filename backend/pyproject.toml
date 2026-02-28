@@ -8,6 +8,7 @@ dependencies = [
     "aiosqlite>=0.22.1",
     "fastapi[standard]>=0.133.0",
     "langchain>=1.2.10",
+    "langchain-groq>=1.1.2",
     "langchain-ollama>=1.0.1",
     "langgraph>=1.0.9",
     "langgraph-checkpoint-sqlite>=3.0.3",
