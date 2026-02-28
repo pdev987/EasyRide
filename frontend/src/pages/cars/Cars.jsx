@@ -74,12 +74,12 @@ export default function Cars() {
             `car-type ${carTypeFilter === "Hatchback" ? "button-selected" : ""}`
           }
         >HatchBack</button>
-        {/* <button
-          onClick={() => handleCarTypeFilter("carType", "electric")}
+        <button
+          onClick={() => handleCarTypeFilter("carType", "Luxury")}
           className={
-            `car-type ${carTypeFilter === "electric" ? "button-selected" : ""}`
+            `car-type ${carTypeFilter === "Luxury" ? "button-selected" : ""}`
           }
-        >Electric</button>*/}
+        >Luxury</button>
 
         {carTypeFilter
           ? (<button onClick={() => handleCarTypeFilter("carType", null)} className="car-type clear-filters">Clear Filters</button>) :
