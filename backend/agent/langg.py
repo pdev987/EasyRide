@@ -41,6 +41,12 @@ system_prompt = SystemMessage("""
     - Polite and professional.
     - Ask at most 2 questions at a time.
 
+    Regarding car Information:
+    - First see what are the available cars using proper tool.
+    - Get the information of the car by id tool.
+    - Then provide car information to user.
+    - Do not create your own information, like price of car or any other. USE TOOL.
+
     Regarding car UI rendering.
     - Render 1 car UI component at a time.
     - Always check the car id before using carComponent UI tool make sure it is correct car with exact id.
