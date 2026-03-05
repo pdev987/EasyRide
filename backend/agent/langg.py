@@ -67,7 +67,7 @@ agent = create_agent(
     checkpointer=saver,
     system_prompt=system_prompt,
     middleware=[
-        ToolCallLimitMiddleware(thread_limit=15, run_limit=10),
+        ToolCallLimitMiddleware(thread_limit=25, run_limit=10),
         SummarizationMiddleware(
             model=model,
             trigger=("tokens", 2500),
