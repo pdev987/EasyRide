@@ -117,16 +117,20 @@ Screenshots of the application interface can be added here.
   <img src="screenshots/landing.png" width="700">
 </p>
 
-## Cars Page
-<p align="center">
-  <img src="screenshots/cars.png" width="700">
-</p>
-
 ## AI Chatbot
 <p align="center">
   <img src="screenshots/ai-chat.png" width="700">
 </p>
 
+## Cars Page
+<p align="center">
+  <img src="screenshots/cars.png" width="700">
+</p>
+
+## Booking
+<p align="center">
+  <img src="screenshots/booking.png" width="700">
+</p>
 ---
 
 # Future Improvements
