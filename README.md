@@ -149,7 +149,7 @@ Before starting the application, make sure **Ollama is installed** and the requi
 Install the model:
 
 ```bash
-ollama pull ministra3:8b
+ollama pull ministral-3:8b
 ```
 
 Start the Ollama server if it is not already running:
