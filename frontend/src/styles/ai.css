@@ -76,4 +76,5 @@
 .input-container button:disabled {
     opacity: 50%;
     color: grey;
+    background-color: red;
 }

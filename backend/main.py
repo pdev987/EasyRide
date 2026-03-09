@@ -7,7 +7,7 @@ from fastapi.responses import FileResponse
 from car_end import car_router
 from chat_ws_end import ws_router
 
-app = FastAPI()
+app = FastAPI(docs_url=None, redoc_url=None)
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
 app.mount("/assets", StaticFiles(directory="dist/assets/"), name="assets")

@@ -40,7 +40,7 @@
     row-gap: 25px;
 }
 
-.car-type .button-selected {
+button.car-type.button-selected {
     background-color: var(--theme-color);
     color: white;
 }
