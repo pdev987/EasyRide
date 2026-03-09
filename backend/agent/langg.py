@@ -70,7 +70,7 @@ agent = create_agent(
         ToolCallLimitMiddleware(thread_limit=25, run_limit=10),
         SummarizationMiddleware(
             model=model,
-            trigger=("tokens", 2500),
+            trigger=("tokens", 3500),
             keep=("messages", 5)
         )
     ]
