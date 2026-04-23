@@ -189,9 +189,5 @@ http://localhost:8000
 
 Open this URL in your browser to access the application.
 
-# Author
-
-**Prathap H R**
-
 GitHub
 https://github.com/pdev987
